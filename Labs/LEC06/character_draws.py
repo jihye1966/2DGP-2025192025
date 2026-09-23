@@ -12,11 +12,13 @@ characterY = centerY + r * math.sin(math.radians(0))
 State = 0 #0:circle, 1: rectangle, 2: triangle
 
 def move_circle():
-    print('circle')
-    clear_canvas()
-    character.draw(centerX, centerY)
-    update_canvas()
-
+    for i in range(0, 360, 5):
+        x = centerX + r * math.cos(math.radians(i))
+        y = centerY + r * math.sin(math.radians(i))
+        clear_canvas()
+        character.draw(x, y)
+        update_canvas()
+        delay(0.01)
     pass
 
 def move_rectangle():
