@@ -15,6 +15,7 @@ def move_circle():
     clear_canvas()
     character.draw(centerX, centerY)
     update_canvas()
+
     pass
 
 def move_rectangle():
@@ -26,8 +27,11 @@ def move_triangle():
     pass
 
 while True:
-    move_circle()
-    move_rectangle()
-    move_triangle()
+    if State == 0:
+        move_circle()
+    elif State == 1:
+        move_rectangle()
+    elif State == 2:
+        move_triangle()
 
 close_canvas()
