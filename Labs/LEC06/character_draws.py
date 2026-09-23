@@ -8,6 +8,8 @@ r = 50
 centerX = 400
 centerY = 300
 
+State = 0 #0:circle, 1: rectangle, 2: triangle
+
 def move_circle():
     print('circle')
     clear_canvas()
