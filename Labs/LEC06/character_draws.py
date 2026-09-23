@@ -4,7 +4,7 @@ from pico2d import *
 open_canvas(800, 600)
 character = load_image('character.png')
 
-r = 50
+r = 200
 centerX = 400
 centerY = 300
 characterX = centerX + r * math.cos(math.radians(0))
@@ -12,7 +12,7 @@ characterY = centerY + r * math.sin(math.radians(0))
 State = 0 #0:circle, 1: rectangle, 2: triangle
 
 def move_circle():
-    for i in range(0, 360, 5):
+    for i in range(0, 360, 1):
         x = centerX + r * math.cos(math.radians(i))
         y = centerY + r * math.sin(math.radians(i))
         clear_canvas()
