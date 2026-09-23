@@ -7,7 +7,8 @@ character = load_image('character.png')
 r = 50
 centerX = 400
 centerY = 300
-
+characterX = centerX + r * math.cos(math.radians(0))
+characterY = centerY + r * math.sin(math.radians(0))
 State = 0 #0:circle, 1: rectangle, 2: triangle
 
 def move_circle():
