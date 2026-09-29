@@ -57,9 +57,22 @@ def move_rectangle():
         move_segment(start, end)
 
 
+def move_triangle():
+    triangle_vertices = [
+        (center_x - circle_radius, center_y - circle_radius),
+        (center_x + circle_radius, center_y - circle_radius),
+        (center_x, center_y + circle_radius),
+        (center_x - circle_radius, center_y - circle_radius),
+    ]
+
+    for start, end in zip(triangle_vertices, triangle_vertices[1:]):
+        move_segment(start, end)
+
+
 while True:
     move_circle()
     move_rectangle()
+    move_triangle()
 
 
 close_canvas()
