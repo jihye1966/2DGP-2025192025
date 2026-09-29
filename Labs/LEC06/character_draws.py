@@ -76,7 +76,20 @@ def move_triangle():
     x = centerX + r * math.cos(math.radians(0))
     y = centerY + r
 
+    while y > 100:
+            clear_canvas()
+            character.draw(x, y)
+            update_canvas()
+            y =  move_bottom(y)
+            delay(0.01) 
 
+    while x > 200:
+            clear_canvas()
+            character.draw(x, y)
+            update_canvas()
+            x, y = move_tri2(x, y)
+            delay(0.01)
+            
     print('triangle')
     pass
 
