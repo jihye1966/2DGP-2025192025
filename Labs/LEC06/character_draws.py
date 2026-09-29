@@ -34,6 +34,9 @@ def move_left(x):
 def move_tri2(x, y):
     return x - 2, y + 1 
 
+def move_tri3(x, y):
+    return x + 2, y + 1
+
 def move_rectangle():
     x = centerX + r * math.cos(math.radians(0))
     y = centerY + r * math.sin(math.radians(0))
