@@ -23,6 +23,7 @@ def move_circle():
         update_canvas()
         delay(0.01)
 
+    State = 1
 
 def move_top(y):
     return y + 3
