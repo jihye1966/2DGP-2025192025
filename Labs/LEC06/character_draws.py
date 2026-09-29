@@ -10,6 +10,9 @@ centerY = 300
 State = 0 #0:circle, 1: rectangle, 2: triangle
 
 def move_circle():
+    x = centerX + r * math.cos(math.radians(0))
+    y = centerY + r * math.sin(math.radians(0))
+
     for i in range(0, 360, 1):
         x = centerX + r * math.cos(math.radians(i))
         y = centerY + r * math.sin(math.radians(i))
