@@ -31,7 +31,8 @@ def move_bottom(y):
 def move_left(x):
     return x - 3
 
-
+def move_tri2(x, y):
+    return x - 2, y + 1 
 
 def move_rectangle():
     x = centerX + r * math.cos(math.radians(0))
