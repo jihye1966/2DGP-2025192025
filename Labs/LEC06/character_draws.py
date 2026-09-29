@@ -48,7 +48,14 @@ def move_rectangle():
         update_canvas()
         x = move_left(x)
         delay(0.01)
-        
+
+    while y < 500:
+        clear_canvas()
+        character.draw(x, y)
+        update_canvas()
+        y = move_top(y)
+        delay(0.01) 
+
     print('rectangle')
     pass
 
