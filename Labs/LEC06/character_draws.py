@@ -89,7 +89,13 @@ def move_triangle():
             update_canvas()
             x, y = move_tri2(x, y)
             delay(0.01)
-            
+
+    while x < 600:
+            clear_canvas()
+            character.draw(x, y)
+            update_canvas()
+            x, y = move_tri3(x, y)
+            delay(0.01)
     print('triangle')
     pass
 
