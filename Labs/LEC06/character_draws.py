@@ -16,8 +16,8 @@ def move_circle():
     y = centerY + r * math.sin(math.radians(0))
 
     for i in range(0, 360, 1):
-        x = centerX + r * math.cos(math.radians(i))
-        y = centerY + r * math.sin(math.radians(i))
+        x = centerX - r * math.cos(math.radians(i))
+        y = centerY - r * math.sin(math.radians(i))
         clear_canvas()
         character.draw(x, y)
         update_canvas()
@@ -37,7 +37,7 @@ def move_bottom(y):
 def move_left(x):
     return x - 3
 
-def move_triangle():
+def move_rectangle():
     global State
 
     x = centerX + r * math.cos(math.radians(0))
