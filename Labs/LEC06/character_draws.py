@@ -31,6 +31,8 @@ def move_bottom(y):
 def move_left(x):
     return x - 3
 
+
+
 def move_rectangle():
     x = centerX + r * math.cos(math.radians(0))
     y = centerY + r * math.sin(math.radians(0))
@@ -67,23 +69,19 @@ def move_rectangle():
     pass
 
 def move_triangle():
+    x = centerX + r * math.cos(math.radians(0))
+    y = centerY + r
 
-    while y > 100:
-            clear_canvas()
-            character.draw(x, y)
-            update_canvas()
-            y =  move_bottom(y)
-            delay(0.01) 
-            
+
     print('triangle')
     pass
 
 while True:
     if State == 1:
         move_circle()
-    elif State == 0:
-        move_rectangle()
     elif State == 2:
+        move_rectangle()
+    elif State == 0:
         move_triangle()
 
 close_canvas()
