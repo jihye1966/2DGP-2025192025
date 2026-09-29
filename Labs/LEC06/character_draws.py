@@ -10,6 +10,8 @@ centerY = 300
 State = 0 #0:circle, 1: rectangle, 2: triangle
 
 def move_circle():
+    global State
+
     x = centerX + r * math.cos(math.radians(0))
     y = centerY + r * math.sin(math.radians(0))
 
@@ -20,7 +22,7 @@ def move_circle():
         character.draw(x, y)
         update_canvas()
         delay(0.01)
-    pass
+
 
 def move_top(y):
     return y + 3
@@ -34,13 +36,9 @@ def move_bottom(y):
 def move_left(x):
     return x - 3
 
-def move_tri2(x, y):
-    return x - 2, y + 1 
+def move_triangle():
+    global State
 
-def move_tri3(x, y):
-    return x + 2, y + 1
-
-def move_rectangle():
     x = centerX + r * math.cos(math.radians(0))
     y = centerY + r * math.sin(math.radians(0))
    
@@ -72,10 +70,15 @@ def move_rectangle():
         x = move_right(x)
         delay(0.01)
 
-    print('rectangle')
-    pass
+def move_tri2(x, y):
+    return x - 2, y + 1 
+
+def move_tri3(x, y):
+    return x + 2, y + 1
 
 def move_triangle():
+    global State
+
     x = centerX + r * math.cos(math.radians(0))
     y = centerY + r
 
@@ -99,15 +102,13 @@ def move_triangle():
             update_canvas()
             x, y = move_tri3(x, y)
             delay(0.01)
-    print('triangle')
-    pass
 
 while True:
-    if State == 1:
+    if State == 0:
         move_circle()
-    elif State == 2:
+    elif State == 1:
         move_rectangle()
-    elif State == 0:
+    elif State == 2:
         move_triangle()
 
 close_canvas()
