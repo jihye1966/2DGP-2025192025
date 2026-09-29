@@ -12,8 +12,8 @@ State = 0 #0:circle, 1: rectangle, 2: triangle
 def move_circle():
     global State
 
-    x = centerX + r * math.cos(math.radians(0))
-    y = centerY + r * math.sin(math.radians(0))
+    x = centerX - r * math.cos(math.radians(0))
+    y = centerY - r * math.sin(math.radians(0))
 
     for i in range(0, 360, 1):
         x = centerX - r * math.cos(math.radians(i))
@@ -40,8 +40,8 @@ def move_left(x):
 def move_rectangle():
     global State
 
-    x = centerX + r * math.cos(math.radians(0))
-    y = centerY + r * math.sin(math.radians(0))
+    x = centerX - r * math.cos(math.radians(0))
+    y = centerY - r * math.sin(math.radians(0))
    
     while y > 100:
         clear_canvas()
@@ -49,26 +49,26 @@ def move_rectangle():
         update_canvas()
         y =  move_bottom(y)
         delay(0.01) 
+        
+    while x < 600:
+           clear_canvas()
+           character.draw(x, y)
+           update_canvas()
+           x = move_right(x)
+           delay(0.01)
+
+    while y < 500:
+            clear_canvas()
+            character.draw(x, y)
+            update_canvas()
+            y = move_top(y)
+            delay(0.01) 
 
     while x > 200:
         clear_canvas()
         character.draw(x, y)
         update_canvas()
         x = move_left(x)
-        delay(0.01)
-
-    while y < 500:
-        clear_canvas()
-        character.draw(x, y)
-        update_canvas()
-        y = move_top(y)
-        delay(0.01) 
-
-    while x < 600:
-        clear_canvas()
-        character.draw(x, y)
-        update_canvas()
-        x = move_right(x)
         delay(0.01)
 
     State = 2
