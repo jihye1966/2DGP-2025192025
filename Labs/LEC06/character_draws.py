@@ -22,6 +22,8 @@ def move_circle():
 def move_top(y):
     return y + 3
 
+def move_right(x):
+    return x + 3
 
 def move_rectangle():
     x = centerX + r * math.cos(math.radians(0))
