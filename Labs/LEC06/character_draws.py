@@ -35,7 +35,13 @@ def move_rectangle():
     x = centerX + r * math.cos(math.radians(0))
     y = centerY + r * math.sin(math.radians(0))
    
-
+    while y > 100:
+        clear_canvas()
+        character.draw(x, y)
+        update_canvas()
+        y =  move_bottom(y)
+        delay(0.01) 
+        
     print('rectangle')
     pass
 
