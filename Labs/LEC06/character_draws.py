@@ -25,6 +25,9 @@ def move_top(y):
 def move_right(x):
     return x + 3
 
+def move_bottom(y):
+    return y - 3
+
 def move_rectangle():
     x = centerX + r * math.cos(math.radians(0))
     y = centerY + r * math.sin(math.radians(0))
