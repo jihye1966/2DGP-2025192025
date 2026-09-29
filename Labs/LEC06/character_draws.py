@@ -71,6 +71,8 @@ def move_triangle():
         x = move_right(x)
         delay(0.01)
 
+    State = 2
+
 def move_tri2(x, y):
     return x - 2, y + 1 
 
