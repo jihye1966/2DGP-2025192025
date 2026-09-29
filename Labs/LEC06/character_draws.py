@@ -105,6 +105,7 @@ def move_triangle():
             update_canvas()
             x, y = move_tri3(x, y)
             delay(0.01)
+    State = 0
 
 while True:
     if State == 0:
