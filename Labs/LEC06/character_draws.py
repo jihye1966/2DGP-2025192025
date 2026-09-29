@@ -49,7 +49,7 @@ def move_rectangle():
         update_canvas()
         y =  move_bottom(y)
         delay(0.01) 
-        
+
     while x < 600:
            clear_canvas()
            character.draw(x, y)
@@ -74,15 +74,15 @@ def move_rectangle():
     State = 2
 
 def move_tri2(x, y):
-    return x - 2, y + 1 
+    return x + 2, y + 1 
 
 def move_tri3(x, y):
-    return x + 2, y + 1
+    return x - 2, y + 1
 
 def move_triangle():
     global State
 
-    x = centerX + r * math.cos(math.radians(0))
+    x = centerX - r * math.cos(math.radians(0))
     y = centerY + r
 
     while y > 100:
@@ -92,19 +92,26 @@ def move_triangle():
             y =  move_bottom(y)
             delay(0.01) 
 
-    while x > 200:
+    while x < 600:
             clear_canvas()
             character.draw(x, y)
             update_canvas()
             x, y = move_tri2(x, y)
             delay(0.01)
 
-    while x < 600:
+    while x > 200:
             clear_canvas()
             character.draw(x, y)
             update_canvas()
             x, y = move_tri3(x, y)
             delay(0.01)
+
+    while y > 300:
+            clear_canvas()
+            character.draw(x, y)
+            update_canvas()
+            y =  move_bottom(y)
+            delay(0.01) 
     State = 0
 
 while True:
