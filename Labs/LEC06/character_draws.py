@@ -62,11 +62,19 @@ def move_rectangle():
         update_canvas()
         x = move_right(x)
         delay(0.01)
-        
+
     print('rectangle')
     pass
 
 def move_triangle():
+
+    while y > 100:
+            clear_canvas()
+            character.draw(x, y)
+            update_canvas()
+            y =  move_bottom(y)
+            delay(0.01) 
+            
     print('triangle')
     pass
 
