@@ -77,6 +77,13 @@ def pause_between_animations():
 	delay(REST_DELAY)
 
 
+def play_frame(animation_index, frame_index):
+	draw_frame(animation_index, frame_index)
+	if should_close():
+		raise SystemExit
+	delay(ANIMATION_DELAY)
+
+
 try:
 	while True:
 		for animation_index in range(ANIMATION_COUNT):
