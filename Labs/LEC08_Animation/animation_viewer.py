@@ -9,6 +9,7 @@ FRAME_WIDTH = FRAME_SIZE
 FRAME_HEIGHT = FRAME_SIZE
 ANIMATION_COUNT = 4
 SPRITE_ROW_COUNT = ANIMATION_COUNT
+FIRST_SPRITE_ROW = SPRITE_ROW_COUNT - 1
 REPEAT_COUNT = 5
 DISPLAY_SIZE = 360
 FRAME_DELAY = 0.08
@@ -25,7 +26,7 @@ def draw_frame(animation_index, frame_index):
 	clear_canvas()
 	character.clip_draw(
 		frame_index * FRAME_WIDTH,
-		(SPRITE_ROW_COUNT - 1 - animation_index) * FRAME_HEIGHT,
+		(FIRST_SPRITE_ROW - animation_index) * FRAME_HEIGHT,
 		FRAME_WIDTH,
 		FRAME_HEIGHT,
 		SCREEN_CENTER_X,
