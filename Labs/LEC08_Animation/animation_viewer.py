@@ -31,7 +31,7 @@ def draw_frame(animation_index, frame_index):
 		source_bottom,
 		FRAME_WIDTH,
 		FRAME_HEIGHT,
-		*VIEWER_CENTER,
+		*frame_destination_position(),
 		DISPLAY_SIZE,
 		DISPLAY_SIZE,
 	)
