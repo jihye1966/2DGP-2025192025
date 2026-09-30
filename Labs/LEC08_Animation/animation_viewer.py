@@ -53,6 +53,10 @@ def frame_source_position(animation_index, frame_index):
 	)
 
 
+def frame_destination_position():
+	return VIEWER_CENTER
+
+
 def should_close():
 	for event in get_events():
 		if event.type == SDL_QUIT:
