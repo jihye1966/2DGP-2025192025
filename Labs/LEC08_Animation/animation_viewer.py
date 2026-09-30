@@ -89,10 +89,7 @@ try:
 		for animation_index in range(ANIMATION_COUNT):
 			for _ in range(REPEAT_COUNT):
 				for frame_index in range(FRAME_COUNT):
-					draw_frame(animation_index, frame_index)
-					if should_close():
-						raise SystemExit
-					delay(ANIMATION_DELAY)
+					play_frame(animation_index, frame_index)
 
 			pause_between_animations()
 			if should_close():
