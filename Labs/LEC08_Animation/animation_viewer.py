@@ -24,8 +24,12 @@ open_canvas(SCREEN_WIDTH, SCREEN_HEIGHT)
 character = load_image('animg.png')
 
 
-def draw_frame(animation_index, frame_index):
+def clear_frame():
 	clear_canvas()
+
+
+def draw_frame(animation_index, frame_index):
+	clear_frame()
 	source_left, source_bottom = frame_source_position(animation_index, frame_index)
 	character.clip_draw(
 		source_left,
