@@ -15,6 +15,7 @@ REPEAT_COUNT = 5
 DISPLAY_SIZE = 360
 FRAME_DELAY = 0.08
 REST_DELAY = 1.0
+ANIMATION_DELAY = FRAME_DELAY
 SCREEN_CENTER_X = SCREEN_WIDTH // 2
 SCREEN_CENTER_Y = SCREEN_HEIGHT // 2
 
@@ -74,7 +75,7 @@ try:
 					draw_frame(animation_index, frame_index)
 					if should_close():
 						raise SystemExit
-					delay(FRAME_DELAY)
+					delay(ANIMATION_DELAY)
 
 			clear_canvas()
 			update_canvas()
