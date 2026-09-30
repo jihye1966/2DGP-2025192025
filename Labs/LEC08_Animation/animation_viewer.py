@@ -5,6 +5,8 @@ SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 FRAME_SIZE = 100
 FRAME_COUNT = 8
+FRAME_WIDTH = FRAME_SIZE
+FRAME_HEIGHT = FRAME_SIZE
 ANIMATION_COUNT = 4
 SPRITE_ROW_COUNT = ANIMATION_COUNT
 REPEAT_COUNT = 5
@@ -22,10 +24,10 @@ character = load_image('animg.png')
 def draw_frame(animation_index, frame_index):
 	clear_canvas()
 	character.clip_draw(
-		frame_index * FRAME_SIZE,
-		(SPRITE_ROW_COUNT - 1 - animation_index) * FRAME_SIZE,
-		FRAME_SIZE,
-		FRAME_SIZE,
+		frame_index * FRAME_WIDTH,
+		(SPRITE_ROW_COUNT - 1 - animation_index) * FRAME_HEIGHT,
+		FRAME_WIDTH,
+		FRAME_HEIGHT,
 		SCREEN_CENTER_X,
 		SCREEN_CENTER_Y,
 		DISPLAY_SIZE,
