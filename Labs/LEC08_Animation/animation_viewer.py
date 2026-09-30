@@ -54,6 +54,6 @@ try:
 			update_canvas()
 			delay(REST_DELAY)
 			if should_close():
-				break
+				raise SystemExit
 finally:
 	close_canvas()
