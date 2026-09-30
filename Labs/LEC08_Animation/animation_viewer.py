@@ -26,7 +26,7 @@ character = load_image('animg.png')
 def draw_frame(animation_index, frame_index):
 	clear_canvas()
 	character.clip_draw(
-		frame_index * FRAME_WIDTH,
+		sprite_column(frame_index) * FRAME_WIDTH,
 		sprite_row(animation_index) * FRAME_HEIGHT,
 		FRAME_WIDTH,
 		FRAME_HEIGHT,
@@ -39,6 +39,10 @@ def draw_frame(animation_index, frame_index):
 
 def sprite_row(animation_index):
 	return FIRST_SPRITE_ROW - animation_index
+
+
+def sprite_column(frame_index):
+	return frame_index
 
 
 def should_close():
