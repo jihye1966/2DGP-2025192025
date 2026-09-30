@@ -5,8 +5,9 @@ open_canvas()
 grass = load_image('grass.png')
 character = load_image('run_animation.png')
 
-# fill here
-
+character.clip_draw(
+    #left, bottom, width, height, x, y
+)
 
 close_canvas()
 
