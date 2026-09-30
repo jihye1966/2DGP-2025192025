@@ -27,7 +27,7 @@ def draw_frame(animation_index, frame_index):
 	clear_canvas()
 	character.clip_draw(
 		frame_index * FRAME_WIDTH,
-		(FIRST_SPRITE_ROW - animation_index) * FRAME_HEIGHT,
+		sprite_row(animation_index) * FRAME_HEIGHT,
 		FRAME_WIDTH,
 		FRAME_HEIGHT,
 		*VIEWER_CENTER,
