@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from pico2d import *
 
 
@@ -10,7 +12,6 @@ FRAME_HEIGHT = FRAME_SIZE
 ANIMATION_COUNT = 4
 SPRITE_ROW_COUNT = ANIMATION_COUNT
 FIRST_SPRITE_ROW = SPRITE_ROW_COUNT - 1
-VIEWER_CENTER = (SCREEN_CENTER_X, SCREEN_CENTER_Y)
 REPEAT_COUNT = 5
 DISPLAY_SIZE = 360
 FRAME_DELAY = 0.08
@@ -18,10 +19,11 @@ REST_DELAY = 1.0
 ANIMATION_DELAY = FRAME_DELAY
 SCREEN_CENTER_X = SCREEN_WIDTH // 2
 SCREEN_CENTER_Y = SCREEN_HEIGHT // 2
+VIEWER_CENTER = (SCREEN_CENTER_X, SCREEN_CENTER_Y)
 
 
 open_canvas(SCREEN_WIDTH, SCREEN_HEIGHT)
-character = load_image('animg.png')
+character = load_image(str(Path(__file__).with_name('animg.png')))
 
 
 def clear_frame():
