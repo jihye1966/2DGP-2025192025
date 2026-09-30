@@ -71,6 +71,12 @@ def should_close():
 	return False
 
 
+def pause_between_animations():
+	clear_canvas()
+	update_canvas()
+	delay(REST_DELAY)
+
+
 try:
 	while True:
 		for animation_index in range(ANIMATION_COUNT):
