@@ -45,6 +45,13 @@ def sprite_column(frame_index):
 	return frame_index
 
 
+def frame_source_position(animation_index, frame_index):
+	return (
+		sprite_column(frame_index) * FRAME_WIDTH,
+		sprite_row(animation_index) * FRAME_HEIGHT,
+	)
+
+
 def should_close():
 	for event in get_events():
 		if event.type == SDL_QUIT:
