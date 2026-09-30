@@ -37,6 +37,10 @@ def draw_frame(animation_index, frame_index):
 	update_canvas()
 
 
+def sprite_row(animation_index):
+	return FIRST_SPRITE_ROW - animation_index
+
+
 def should_close():
 	for event in get_events():
 		if event.type == SDL_QUIT:
