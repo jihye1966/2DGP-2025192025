@@ -87,9 +87,7 @@ try:
 						raise SystemExit
 					delay(ANIMATION_DELAY)
 
-			clear_canvas()
-			update_canvas()
-			delay(REST_DELAY)
+			pause_between_animations()
 			if should_close():
 				raise SystemExit
 finally:
