@@ -25,9 +25,10 @@ character = load_image('animg.png')
 
 def draw_frame(animation_index, frame_index):
 	clear_canvas()
+	source_left, source_bottom = frame_source_position(animation_index, frame_index)
 	character.clip_draw(
-		sprite_column(frame_index) * FRAME_WIDTH,
-		sprite_row(animation_index) * FRAME_HEIGHT,
+		source_left,
+		source_bottom,
 		FRAME_WIDTH,
 		FRAME_HEIGHT,
 		*VIEWER_CENTER,
